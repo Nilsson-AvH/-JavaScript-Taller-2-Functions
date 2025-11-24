@@ -43,6 +43,9 @@ const biblioteca = {
     agregarLibro: function(titulo, autor, leido) {
         this.libros.push({ titulo, autor, leido });
     },
+    verLista: function() {
+        console.log(this.libros);
+    },
     listarLibrosPendientes: function() {
         let message = ``;
         for (let libro of this.libros) {
@@ -72,5 +75,6 @@ biblioteca.agregarLibro('Aprendiendo JavaScript: desde cero hasta ECMAScript 6',
 biblioteca.agregarLibro('JavaScript The Good Parts', 'Douglas Crockford', true);
 biblioteca.agregarLibro('JavaScript Design Patterns', 'Addy Osmani', true);
 
+// console.log(biblioteca.verLista());
 console.log(biblioteca.listarLibrosPendientes());
 console.log(biblioteca.estadisticas());
